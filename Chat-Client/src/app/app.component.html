@@ -1,0 +1,32 @@
+<div class="container text-center">
+  <h1>{{ title }}</h1>
+  <br />
+  <br />
+  <div class="card mx-auto" style="width: 18rem;">
+    <input type="text" name="este"  id="este" class="form-control block" placeholder = "Nombre" [(ngModel)]="Nom" />
+    <input type="text" class="form-control block" disabled  [(ngModel)]="id" />
+    <div class="card-body">
+      <h5 class="card-title">Chat Sockets</h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let mensaje of mensajes" >
+          {{ mensaje }}
+        </li>
+      </ul>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"></span>
+        </div>
+        <input type="text"  class="form-control"  placeholder="Enviar" [(ngModel)]="msg"  />
+      </div>
+      <button type="button" name="Boton" id="Boton"  class="btn btn-primary btn-block" (click)="enviarMensage()">
+        Send Message
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+<!--onclick="estewe()" -->
